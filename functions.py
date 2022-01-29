@@ -111,8 +111,18 @@ def draw_ks_reps(n, f, args=(), size=10000, n_reps=10000):
 
     return reps
 
-'''# Draw target distribution: x_f
-data2 = np.random.exponential(np.mean(data),size=10000)
+
+'''
+
+Example of usage of functions
+# Draw target distribution: x_f
+
+data = np.array([ 93, 31, 19, 81, 76, 93, 40, 24, 149, 102, 73, 40, 68, 23, 8, 7, 31, 12, 24, 66, 11, 120, 77, 153, 131, 241, 34, 23, 15])
+
+# Function that you are trying to infer about.
+
+data2 = np.random.exponential(np.mean(data),size=10000) 
+
 # Compute K-S stat: d
 d = ks_stat(data,data2)
 
@@ -122,4 +132,6 @@ reps = draw_ks_reps(len(data), np.random.exponential,
 
 # Compute and print p-value
 p_val = sum(reps >= d) / 10000
-print('p =', p_val)'''
+print('p =', p_val)
+
+'''
