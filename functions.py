@@ -22,6 +22,21 @@ def ecdf(data):
 
     return x, y
 
+
+
+''' Given an x,y  from ecdf plots ecdf graphically'''
+
+def ecdf_plot(x, y, xlabel='name of xlabel'):
+    
+    import matplotlib.pyplot as plt
+    
+    _ = plt.plot(x,y,marker='.',linestyle='none')
+    _ = plt.xlabel(xlabel)
+    _ = plt.ylabel('ECDF')
+    plt.margins(0.02)
+    plt.show()
+    
+
 '''
 ecdf_formal(x,data) returns value of the formal ecdf derived from dataset (data) for each value in array x (ecdf dos dados experimentais).
 
